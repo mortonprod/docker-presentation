@@ -83,14 +83,14 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Short title]{Main Topic } % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Docker (An opinionated guide)]{Docker (An opinionated guide)} % The short title appears at the bottom of every slide, the full title is only on the title page
 
-\author{John Smith} % Your name
-\institute[UCLA] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+\author{Alexander Morton} % Your name
+\institute[Financial Cloud] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-University of California \\ % Your institution for the title page
+Financial Cloud\\ % Your institution for the title page
 \medskip
-\textit{john@smith.com} % Your email address
+\textit{alex.morton@financial-cloud.com} % Your email address
 }
 \date{\today} % Date, can be changed to a custom date
 
@@ -110,22 +110,51 @@ University of California \\ % Your institution for the title page
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{Introduction} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
-\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{What is Docker?} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
 \begin{frame}
-\frametitle{Paragraphs of Text}
-Sed iaculis dapibus gravida. Morbi sed tortor erat, nec interdum arcu. Sed id lorem lectus. Quisque viverra augue id sem ornare non aliquam nibh tristique. Aenean in ligula nisl. Nulla sed tellus ipsum. Donec vestibulum ligula non lorem vulputate fermentum accumsan neque mollis.\\~\\
+\frametitle{What is Docker?}
+"Docker is the company driving the container movement and the only container platform provider to address every application across the hybrid cloud."\cite{whatisdocker}
+\begin{itemize}
 
-Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. Aliquam vel dui orci, a porta odio. Nullam id suscipit ipsum. Aenean lobortis commodo sem, ut commodo leo gravida vitae. Pellentesque vehicula ante iaculis arcu pretium rutrum eget sit amet purus. Integer ornare nulla quis neque ultrices lobortis. Vestibulum ultrices tincidunt libero, quis commodo erat ullamcorper id.
+\item Lorem ipsum dolor sit amet, consectetur adipiscing elit
+\item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
+\item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
+\item Nam cursus est eget velit posuere pellentesque
+\item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
+\end{itemize}
+
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Bullet Points}
+    \frametitle{Using Columns}
+    \begin{columns}
+    \column{0.5\textwidth}
+    \begin{itemize}
+
+        \item Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        \item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
+        \item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
+        \item Nam cursus est eget velit posuere pellentesque
+        \item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
+    \end{itemize}
+    \column{0.5\textwidth}
+    \begin{figure}
+    \includegraphics[scale=0.5]{./pics/docker.png}
+    \caption{Docker}
+    \end{figure}
+    \end{columns}
+\end{frame}
+
+%------------------------------------------------
+\subsection{Why Use Docker?} 
+\begin{frame}
+\frametitle{Why Use Docker?}
 \begin{itemize}
 \item Lorem ipsum dolor sit amet, consectetur adipiscing elit
 \item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
@@ -136,103 +165,124 @@ Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. A
 \end{frame}
 
 %------------------------------------------------
-
+\section{How to use docker} 
+\subsection{Docker File Commands} 
 \begin{frame}
-\frametitle{Blocks of Highlighted Text}
-\begin{block}{Block 1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+\frametitle{Docker File Commands}
+\begin{block}{FROM}
+This will import a base image.
 \end{block}
 
-\begin{block}{Block 2}
-Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
+\begin{block}{COPY}
+This will copy files into the image.
 \end{block}
 
-\begin{block}{Block 3}
-Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
-\end{block}
 \end{frame}
 
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Multiple Columns}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Table}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
+%----------------------------------------------
+\subsection{Example Docker File} 
+\begin{frame}[fragile] 
+\frametitle{Example Docker File}
+\begin{example}[Base Image for all ours apps in production]
+\tiny
 \begin{verbatim}
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
+FROM node:carbon
+
+# Set working directory for container
+ENV HOME=/usr/src/app
+WORKDIR $HOME
+
+# Need to install aws-cli so the container can get the environment file on startup.
+RUN apt-get update
+RUN apt-get install -qq -y python-pip libpython-dev 
+RUN curl -O https://bootstrap.pypa.io/get-pip.py
+RUN python get-pip.py
+RUN pip install awscli
+
+# Install vim for development
+RUN apt-get install vim -y
+
+RUN mkdir -p $HOME
+RUN mkdir -p $HOME/logs
+
+# Give everyone including node user the ability to execute/read/write to app directory.
+# Need to write to app so we can run startup script.
+RUN chmod -R o+rwx /usr/src/app 
+
+COPY ./.aws $HOME/.aws
+RUN aws s3 cp s3://glabs-npmrc/.npmrc ./.npmrc
+
+RUN npm i -g pm2
+COPY ./setup.sh $HOME
+\end{verbatim}
+\end{example}
+\begin{example}[We expand on that base image for each app]
+\tiny
+\begin{verbatim}
+FROM 168489741608.dkr.ecr.eu-west-3.amazonaws.com/production-env:latest
+
+COPY ./package.json $HOME/
+COPY ./dist $HOME/dist/
+COPY ./UI/dist $HOME/UI/dist/
+
+ENV NODE_ENV=production
+RUN npm install
+
+ENV JSON=rules-engine.json
+
+# Setup will get env file and set VPC dependent env variables.
+CMD ["bash","/usr/src/app/setup.sh"]
+\end{verbatim}
+\end{example}
+\end{frame}
+
+
+\begin{frame}[fragile] 
+\frametitle{Example Docker File}
+\begin{example}[We expand on that base image for each app]
+\tiny
+\begin{verbatim}
+FROM 168489741608.dkr.ecr.eu-west-3.amazonaws.com/production-env:latest
+
+COPY ./package.json $HOME/
+COPY ./dist $HOME/dist/
+COPY ./UI/dist $HOME/UI/dist/
+
+ENV NODE_ENV=production
+RUN npm install
+
+ENV JSON=rules-engine.json
+
+# Setup will get env file and set VPC dependent env variables.
+CMD ["bash","/usr/src/app/setup.sh"]
+\end{verbatim}
 \end{example}
 \end{frame}
 
 %------------------------------------------------
-
+\subsection{Docker CLI} 
 \begin{frame}
-\frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
+    \frametitle{Docker CLI}
+    What you can do with the angular cli.
+    \begin{figure}
+    \includegraphics[scale=0.3]{./pics/High-level-overview-of-Docker-architecture.jpg}
+    \caption{Docker}
+    \end{figure}
 \end{frame}
 
 %------------------------------------------------
 
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
+\subsection{Docker Compose} 
+\begin{frame}
+\frametitle{Docker Compose}
+\begin{block}{FROM}
+This will import a base image.
+\end{block}
 
-This statement requires citation \cite{p1}.
+\begin{block}{COPY}
+This will copy files into the image.
+\end{block}
+
 \end{frame}
 
 %------------------------------------------------
@@ -241,9 +291,9 @@ This statement requires citation \cite{p1}.
 \frametitle{References}
 \footnotesize{
 \begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
+\bibitem[Docker, 2018]{whatisdocker} Docker (2018)
+\newblock What is Docker
+\newblock \href{https://www.docker.com/what-docker}{https://www.docker.com/what-docker} 
 \end{thebibliography}
 }
 \end{frame}
